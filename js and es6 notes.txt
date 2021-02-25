@@ -1,0 +1,82 @@
+Basics of Javascript Learning:
+- Everything in Javascript is an Obejct.
+- Method vs Function: a method is associated with an object, while a function is not.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+'this' Keyword in Javascript: The JavaScript this keyword refers to the object it belongs to.
+- It has different values depending on where it is used:
+    - In a method, this refers to the owner object.
+    - Alone, this refers to the global object. (In a browser window the Global object is [object Window])
+    - In a function, this refers to the global object.
+    - In a function, in strict mode, this is undefined.
+    - In an event, this refers to the element that received the event.
+    - Methods like call(), and apply() can refer this to any object. 
+    To set the value of this to a particular value when calling a function, use call(), or apply().
+
+- Classes are always strict mode code. Calling methods with an undefined this will throw an error.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+'filter()' method in JavaScript: 
+    - The filter() method creates an array filled with all array elements that pass a test (provided as a function).
+    - filter() does not execute the function for array elements without values.
+    - filter() does not change the original array.
+
+    Syntax: array.filter(function(currentValue, index, arr), thisValue)
+    Description: function() - Function is a predicate, to test each element of the array. 
+        Return a value that coerces to true to keep the element, or to false otherwise. 
+        It accepts three arguments: 
+            i) currentValue - The current element being processed in the array.
+            ii) index (optional) - The index of the current element being processed in the array.
+            iii) arr (optional) - The array filter was called upon.
+
+                thisValue (optional) - Value to use as this when executing callback. 
+                If this parameter is empty, the value "undefined" will be passed as its "this" value.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+'reduce()' method in Javascript: 
+    - The reduce() method reduces the array to a single value.
+    - The reduce() method executes a provided reducer function for each value of the array (from left-to-right).
+    - The return value of the function is stored in an accumulator (result/total).
+    - reduce() does not execute the function for array elements without values. 
+    - reduce() does not change the original array.
+    - Calling reduce() on an empty array without an initialValue will throw a TypeError.
+
+    Syntax: array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
+    Description: function() - A function to execute on each element in the array (except for the first, if no initialValue is supplied).
+            It accepts four arguments:
+                i) total - The initialValue, or the previously returned value of the function.
+                ii) currentValue - The value of the current element.
+                iii) currentIndex (optional) - The array index of the current element. 
+                    Starts from index 0 if an initialValue is provided. Otherwise, it starts from index 1.
+                iv) arr (optional) - The array object the current element belongs to i.e. Source Array.
+
+            initialValue (optional) - A value to be passed to the function as the initial value.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+'map()' method in JavaScript: 
+    - The map() method creates a new array with the results of calling a function for every array element.
+    - The map() method calls the provided function once for each element in an array, in order.
+    - map() does not execute the function for array elements without values.
+    - map() does not change the original array.
+
+    Syntax: array.map(function(currentValue, index, arr), thisValue)
+    Description: function() - A function to be run for each element in the array.
+            It accepts three arguments:
+                i) currentValue - The value of the current element.
+                ii) index (optional) - The array index of the current element.
+                iii) arr (optional) - The array object the current element belongs to.
+
+            thisValue (optional) - A value to be passed to the function to be used as its "this" value.
+            If this parameter is empty, the value "undefined" will be passed as its "this" value.
+
+
+
+
+
+
+- ES6: let and const, arrow functions, template literals, default parameters, 
+object literals, rest and spread operators and destructuring assignment.

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <title>JS this Keyword in Event Handler Example</title>
+</head>
+<!-- Example: this in Event Handlers -->
+
+<body>
+    <p>In HTML event handlers, this refers to the HTML element that received the event.</p>
+    <button id="btn1">Click Me To Hide</button>
+
+    <script>
+        "use strict";
+
+        (function () {
+            var btn = document.getElementById("btn1");
+            btn.addEventListener("click", function () {
+                this.style.display = 'none';
+            });
+        })();
+    </script>
+</body>
+
+</html>
